@@ -2,14 +2,18 @@
 
 int main(void)
 {
-    int num;
+    int c;
+    int count = 0;
 
-    printf("Enter an integer: ");
-    scanf("%d", &num);
+    printf("Enter a string: ");
 
-    if (num > 0)
-        printf("Absolute value: %d\n", num);
-    else
-        printf("Absolute value: %d\n", -num);
+    while ((c = getchar()) != '\n')
+    {
+        if (c >= '0' && c <= '9')
+            count = count + 1;
+    }
+
+    printf("There are %d digits.\n", count);
+
     return 0;
 }
