@@ -5,13 +5,11 @@ int main(void)
     int num;
 
     printf("Enter an integer: ");
-    scanf("%d",&num);
+    scanf("%d", &num);
 
     if (num > 0)
-        printf("positive\n");
-    else if (num < 0)
-        printf("negative\n");
+        printf("Absolute value: %d\n", num);
     else
-        printf("zero\n");
+        printf("Absolute value: %d\n", -num);
     return 0;
 }
