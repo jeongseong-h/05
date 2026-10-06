@@ -2,32 +2,25 @@
 
 int main(void)
 {
-    int num1;
-    int num2;
-    char op;
+    int answer = 65;
+    int trial = 0;
+    int num;
 
-    printf("Enter equation: ");
-    scanf("%d %c %d", &num1, &op, &num2);
+    do
+    {
+        printf("Guess a number: ");
+        scanf("%d", &num);
 
-    switch(op){
-        case '+':
-        printf("%d + %d = %d\n", num1, num2, num1 + num2);
-        break;
+        if (num < answer)
+            printf("low..\n");
+        else if (num > answer)
+            printf("high..\n");
 
-        case '-':
-        printf("%d - %d = %d\n", num1, num2, num1 - num2);
-        break;
+        trial++;
 
-        case '*':
-        printf("%d * %d = %d\n", num1, num2, num1 * num2);
-        break;
-        
-        case '/':
-        printf("%d / %d = %d\n", num1, num2, num1 / num2);
-        break;
-        
+    } while (num != answer);
 
-    }
+    printf("Congratulations! Trials: %d\n", trial);
 
     return 0;
 }
